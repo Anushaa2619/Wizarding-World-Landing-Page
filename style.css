@@ -222,6 +222,7 @@ button:hover{
     justify-content: center;
     margin-top: 3.5rem;
     flex-wrap: wrap;
+    width: 100%;
 } 
 
 .world{
@@ -239,6 +240,7 @@ button:hover{
     margin: 0rem auto auto auto;
     border-bottom-left-radius: 1rem;
     border-bottom-right-radius: 1rem;
+     object-fit: cover;
 }
 
  .discover-img img {
@@ -259,18 +261,19 @@ button:hover{
 
 
 .archive h5, .discover h5, .latest-news h5 {
-    margin-left: 2rem;
-    margin-top: 1rem;
+    margin: auto;
 }
 
 .latest-news, .sub-section1, .discover  {
     margin-bottom: 3rem;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .sub-section1 p, .discover p, .latest-news p {
     margin-top: 4rem;
     margin-right: auto;
-    width: 33rem;
+   
 }
 
 .news-text, .section-text, .sort-text{
@@ -278,6 +281,7 @@ button:hover{
     font-size: 1.5rem;
     text-align: center;
     padding: 0 2rem;
+    max-width: 100%;
 }
 
 .wizard h5{
