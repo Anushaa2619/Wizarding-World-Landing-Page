@@ -1,0 +1,609 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    overflow-x: hidden;
+}
+body {
+    background-color: black;
+    font-family: "Sofia Pro", Helvetica, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, メイリオ, Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+    color: white;
+    overflow-x: hidden;
+}
+
+.head {
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: 100vw;
+    max-width: 100%;
+    z-index: 1000;
+    top: 0;
+    background-color: black;
+    position: fixed;
+    transition: background-color 0.3s; 
+
+}
+
+.lead {
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    height: auto;
+    position: relative;
+
+
+}
+
+.head.scrolled li a {
+    color: #56449E;
+    font-family: Apple Chancery;
+    transition-duration: 1s;
+}
+
+.head.scrolled li a:hover {
+    text-decoration: underline 1.5px white;
+}
+
+.head.scrolled button {
+    color: #56449E;
+    font-family: Apple Chancery;
+    transition-duration: 1s;
+}
+
+.head.scrolled button:hover {
+    color: white;
+}
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: auto;
+    background-size: contain;
+}
+
+.logo img {
+    height: 5.5rem;
+    width: auto;
+}
+
+.panel{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.navigation-bar {
+    display: flex;
+}
+.menu li{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 1rem;
+    display: inline-block;
+}
+
+li a{
+    color: white;
+    text-decoration: none;
+}
+
+li a:hover{
+    font-weight: 650;
+    text-decoration: underline 1.5px #56449E;
+    font-family: Amasis MT Pro ;
+}
+
+.menu-bars{
+    display: none;
+    flex-direction: column;
+    margin: 1rem;
+}
+
+#menu-button{
+    display: flex;
+}
+
+@media (max-width: 768px) {
+    .menu-bars{
+        display:flex;
+    }
+
+    .navigation-bar{
+        display: none;
+    }
+
+    .navigation-bar.active{
+        display: flex;
+    }
+
+    .menu{
+        display: flex;
+        color: white; 
+        flex-direction: column;
+        align-items: center;
+        background-color: black;
+        position: fixed;
+        top: 5.5rem;
+        left: 0;
+        width: 100%;
+        text-align:center;
+        justify-content: space-between;
+        transition: all 0.5s ease;
+        display: inline-block; 
+    }
+
+    .menu li {
+        display: block;
+    }
+    li a{
+        color: white;
+        text-decoration: none;
+    }
+    
+    li a:hover{
+        font-weight: 650;
+        text-decoration: underline 1.5px #56449E;
+        font-family: Amasis MT Pro ;
+    } 
+}
+
+.panel button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    color: white;
+    font-size: 1rem;
+    height: 2rem; 
+    width: 4rem;
+    margin-right: 1rem;
+    border: 0.0001rem solid #56469E;
+    border-radius: 0.3rem;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: #56449E;
+}
+.main-section {
+    z-index: 0;
+    padding-top: 5.5rem;
+}
+
+.home {
+    height: 85vh;
+    width: auto;
+    background-image: url("image/hogwarts_castle_.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    border: 0.1px solid black;
+    text-align: center;
+}
+
+.home img {
+    height: auto;
+    width: auto;
+    margin-top: 10rem;
+}
+
+.home h3 {
+    margin-top: 13rem;
+    font-size: 2rem;
+    opacity: 40%;
+}
+
+.home h1 {
+    font-size: 3.5rem;
+}
+.home h3,.home h1 {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+ 
+}
+
+#news, #JK-archive, #sorting-hat, #discovering{
+    padding-top: 3.1rem;
+}
+
+.news, .archive, .sort{
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    margin-top: 3.5rem;
+    flex-wrap: wrap;
+    width: 100%;
+} 
+
+.world{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 3.5rem;
+} 
+
+.news img, .discover-img img, .archive img {
+    height: 60vh;
+    width: 48vw;
+    max-width: 100%;
+    margin: 0rem auto auto auto;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    object-fit: cover;
+}
+
+ .discover-img img {
+    object-fit: contain; 
+}  
+
+.latest-news h5, .latest-news p, .discover h5, .discover p, .archive h5, .archive p  {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+    width: 32rem;
+    font-size: xx-large;
+    box-sizing: border-box;
+}
+
+
+
+.archive h5, .discover h5, .latest-news h5 {
+    margin: auto;
+}
+
+.latest-news, .sub-section1, .discover  {
+    margin-bottom: 3rem;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.sub-section1 p, .discover p, .latest-news p {
+    margin-top: 4rem;
+    margin-right: auto;
+}
+
+.news-text, .section-text, .sort-text{
+    color: white;
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 0 2rem;
+    max-width: 100%;
+}
+
+.wizard h5{
+    font-size: xx-large;
+    margin-bottom: 4rem;
+    text-align: center;
+}
+
+.world-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 60vh;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.tab1, .tab2 {
+    display: flex;
+    flex-direction: row;
+}
+
+.books, .movies, .games, .onstage {
+    display: flex;
+    width: 50%;
+    max-width:100%;
+    max-height: 100%;
+    flex-direction: column;
+    flex-wrap: wrap; 
+}
+
+.books p, .movies p, .games p, .onstage p{
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+}
+.books img, .movies img, .games img, .onstage img {
+    width: 22vw;
+    height: 53vh;
+    max-height: 100%;
+    max-width: 100%;
+    border-radius: 8rem;
+     margin-right: 1rem;
+    margin-left: 1rem; 
+}
+
+
+
+@media (max-width: 768px) {
+
+    .news, .archive, .sort{
+        display: flex; 
+        align-items: center;
+        justify-content: center;
+        margin-top: 3.5rem;
+        flex-wrap: wrap;
+        width: 100%;
+        object-fit: contain;
+    } 
+
+    .news img, .discover-img img, .archive img {
+        height: 60vh;
+        width: auto;
+        max-width: 100%;
+        margin: auto;
+        border-bottom-left-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+        object-fit: cover;
+    }
+  
+    
+    .latest-news h5, .latest-news p, .discover h5, .discover p, .archive h5, .archive p  {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin: auto;
+        width: auto;
+        font-size: clamp(1.8rem, 2vw + 0.5rem, 3rem);
+        box-sizing: border-box;
+    }
+    
+    
+    
+    .archive h5, .discover h5, .latest-news h5 {
+        margin: auto;
+        font-size: xx-large;
+        text-align: center;
+    }
+    
+    .latest-news, .sub-section1, .discover  {
+        margin-bottom: 3rem;
+        margin-right: 1rem;
+        margin-left: 1rem;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .sub-section1 p, .discover p, .latest-news p {
+        margin-top: 4rem;
+        margin-right: auto;
+    }
+    
+    .news-text, .section-text, .sort-text{
+        color: white;
+        font-size: clamp(1rem, 2vw + 0.5rem, 2rem);
+        text-align: center;
+        padding: 0 2rem;
+        max-width: 100%;
+    }
+
+    .world-img {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+    }
+
+    .wizard h5{
+        font-size: xx-large;
+        margin-bottom: 4rem;
+        text-align: center;
+    }
+
+    .tab1, .tab2 {
+        display: flex;
+        flex-direction: row;
+        transition: 50s ease;
+    }
+
+    .tab1 img {
+        max-width: 98%;
+        margin-left: 0.1rem;
+    }
+
+    .tab2 img {
+        max-width: 95%;
+        margin-left: 0.5rem; 
+    }
+
+    .books, .movies, .games, .onstage {
+        display: flex;
+        width: 100%;
+        max-width:100%;
+        max-height: 100%;
+        flex-direction: column;
+        flex-wrap: wrap; 
+    }
+    
+    .books p, .movies p, .games p, .onstage p{
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        display: flex;
+        justify-content: center;
+    }
+    .books img, .games img,.movies img, .onstage img{
+        width: auto;
+        height: 53vh;
+        max-height: 100%;
+        border-radius: 8rem;
+        align-items:center;
+        margin-right: 1rem;
+    }
+
+    .books img, .games img{
+        max-width: 98%;
+        margin-left: 0.2rem;
+    }
+
+    .movies img, .onstage img{
+        max-width: 95%;
+        margin-left: 0.5rem; 
+     
+    }
+    
+    
+}
+
+
+@media (max-width: 576px) {
+
+    .world-img {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+    }
+    .tab1, .tab2 {
+        display: flex;
+        flex-direction: column;
+    }
+    .books, .movies, .games, .onstage {
+        display: flex;
+        width: 100%;
+        max-width:100%;
+        max-height: 100%;
+        flex-direction: column;
+        flex-wrap: wrap; 
+    }
+    
+    .books p, .movies p, .games p, .onstage p{
+        margin-top: 1rem;
+        display: flex;
+        justify-content: center;
+    }
+    .books img, .games img {
+        width: 100%;
+        height: 53vh;
+        max-height: 100%;
+        max-width: 96%;
+        border-radius: 8rem;
+        align-items:center;
+        margin-top: 1rem;
+        margin-bottom: 0.4rem; 
+        margin-left: 0.5rem;
+    }
+
+     .onstage img, .movies img {
+        width: 100%;
+        height: 53vh;
+        max-height: 100%;
+        max-width: 96%;
+        border-radius: 8rem;
+        align-items:center;
+        margin-top: 1rem;
+        margin-bottom: 0.4rem; 
+    }
+    
+}
+
+.foot {
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: 100%;
+    /* max-height: 100%;
+    max-width: 100%; */
+    border-top: 0.011rem solid white;
+   
+    margin-top: 5rem;
+    overflow: hidden;
+}
+
+.footer-box {
+    margin: 2rem auto;
+    height: auto;
+    width: 100%;
+    max-width: 100%;
+    /* max-height: 100%; */
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.footer-box h6{
+    margin-bottom: 2rem;
+    font-size: 2vw;
+}
+
+.footer-box a, .footer-box p {
+    margin-bottom: 1.5rem;
+    font-size:  1.5vw;
+}
+
+.box1 {
+    display: flex;
+    flex-direction: column;
+    width: auto; 
+    max-width: 100%; 
+    /* text-align: center;  */
+}
+
+.box1 a {
+    color: white;
+    text-decoration: none;
+}
+
+.facebook, .pinterest, .instagram {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    gap: 0.5rem;
+    /* height: auto; */
+}
+
+.facebook i, .instagram i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    height: 1rem;
+    background-color: black;
+}
+
+.pinterest i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    height: 1rem;
+    background-color: black;
+} 
+@media (max-width: 768px) {
+    .footer-box {
+        flex-direction: row; 
+        margin: 1 auto;
+    }
+
+    .footer-box h6 {
+        font-size: 3vw; 
+    }
+
+    .footer-box a, .footer-box p {
+        font-size: 2.5vw;
+    }
+}
