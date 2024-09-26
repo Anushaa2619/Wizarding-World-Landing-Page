@@ -240,6 +240,8 @@ button:hover{
     border-bottom-left-radius: 1rem;
     border-bottom-right-radius: 1rem;
     object-fit: cover;
+    margin-left: 1rem;
+    margin-right: 1rem;
 }
 
  .discover-img img {
