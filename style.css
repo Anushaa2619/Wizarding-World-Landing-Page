@@ -350,7 +350,7 @@ button:hover{
         border: 1px solid white;
     }
     .latest-news-img img, .discover-img img, .archive-img img {
-        height: auto;
+        height: 60vh;
         max-height: 100%;
         width: auto;
         max-width: 100%;
